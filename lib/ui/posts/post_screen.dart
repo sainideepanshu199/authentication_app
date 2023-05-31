@@ -20,8 +20,10 @@ class _PostScreenState extends State<PostScreen> {
           IconButton(
               onPressed: () {
                 auth.signOut().then((value) {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => LoginScreen()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const LoginScreen()));
                 }).onError((error, stackTrace) {
                   Utils().toastMessage(error.toString());
                 });

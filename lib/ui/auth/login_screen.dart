@@ -5,6 +5,7 @@ import 'package:authentication_app/widgets/round_button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:authentication_app/ui/auth/login_with_phone_number_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -22,7 +23,6 @@ class _LoginScreenState extends State<LoginScreen> {
   final _auth = FirebaseAuth.instance;
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     emailController.dispose();
     passwordController.dispose();
@@ -43,7 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
       Utils().toastMessage(value.user!.email.toString());
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => PostScreen()),
+        MaterialPageRoute(builder: (context) => const PostScreen()),
       );
     }).onError((error, stackTrace) {
       debugPrint(error.toString());
@@ -141,6 +141,26 @@ class _LoginScreenState extends State<LoginScreen> {
                       },
                       child: const Text('Sign up')),
                 ],
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const LoginWithPhoneNumber()));
+                },
+                child: Container(
+                  height: 50,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
+                      border: Border.all(
+                        color: Colors.black,
+                      )),
+                  child: const Center(child: Text('Login with phone')),
+                ),
               )
             ],
           ),
