@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "45881835603",
+    "project_id": "authapp1990",
+    "storage_bucket": "authapp1990.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45881835603:android:a9ef74702c05ecd3bb46a6",
+        "android_client_info": {
+          "package_name": "com.example.authentication_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQec_2gnP9m1ddfqJkJ8UK0Ww2r6nPWmY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
