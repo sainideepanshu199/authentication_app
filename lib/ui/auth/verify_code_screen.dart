@@ -14,6 +14,7 @@ class VerifyCodeScreen extends StatefulWidget {
 
 class _VerifyCodeScreenState extends State<VerifyCodeScreen> {
   @override
+  // ignore: override_on_non_overriding_member
   bool loading = false;
   final auth = FirebaseAuth.instance;
   final verifyCodeController = TextEditingController();
