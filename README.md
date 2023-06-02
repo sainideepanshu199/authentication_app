@@ -1,2 +1,2 @@
 # authentication_app
-# with real-time nosql firebase database and sql firestore database
+# it is a flutter app using realtime firebase database to perform CRUD operations
